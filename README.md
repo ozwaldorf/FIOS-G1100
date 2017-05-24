@@ -5,6 +5,7 @@ Most of the original info here is from the [binwalk issue thread](https://github
 
 ### Hardware information
 The cpu is an ARMv7 `Cortina G4`
+link found when searching the model number[WPCS7542E A1](http://www.cortina-access.com/dhp/16-products/996-cs7542-cs7522)
 
 ### Current method of getting a root console ([@jameshilliard](https://github.com/jameshilliard))
 You have to enable ssh using tr-069 on the WAN side(there's a built in remote activate-able root ssh backdoor), I set up a local genieacs server to do that. Redirecting the router to a local acs server is a bit tricky though, I originally tried to mitm it but that's not possible since the router verifies the acs server ssl certificate.
