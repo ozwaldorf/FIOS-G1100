@@ -25,6 +25,9 @@ These are the config file encryption/decryption scripts I'm using:
 - [gwdecrypt.py](https://gist.github.com/jameshilliard/7112235b62dd929d69d7980c979ae7c0)
 - [gwencrypt.py](https://gist.github.com/jameshilliard/99191b2a2877220041dc8789fa07339a)
 
+To enable the tr-069 backdoor you need to send this setParameterValues request using the acs server ["InternetGatewayDevice.X_D4A928_SSH_State", "SSH_REMOTE",'xsd:string"]. It will then generate a temporary root ssh password available by querying getParameterValues for InternetGatewayDevice.X_D4A928_SSH_Session_Password the routers ssh server should listen on the wan side port 22222. Disconnecting from ssh closes the session and you have to do that
+process again to get back in.
+
 ### Information on serial console
 The debug console is disabled for the UART pins on the router board.
 
