@@ -6,7 +6,7 @@ Most of the original info here is from the [binwalk issue thread](https://github
 ### Hardware information
 The cpu is an ARMv7 `Cortina G4`
 
-link found when searching the model number[WPCS7542E A1](http://www.cortina-access.com/dhp/16-products/996-cs7542-cs7522)
+link found when searching the model number [WPCS7542E A1](http://www.cortina-access.com/dhp/16-products/996-cs7542-cs7522)
 
 Documentation: [450337 CS7542/CS7522 Product Brief](http://www.cortina-access.com/dhp/download/203/996/61)
 
