@@ -5,6 +5,7 @@ Most of the original info here is from the [binwalk issue thread](https://github
 
 ### Verizon open source code for adherence to the gpl licence
 https://www.verizon.com/support/consumer/internet/open-source-software-portal?CMP=DMC-CVZ_ZZ_ZZ_Z_DO_N_X00366
+https://www.verizon.com/supportresources/docs/fqg-gpl-open-source-insert.pdf
 
 ### Hardware information
 The cpu is an ARMv7 `Cortina G4`
