@@ -3,6 +3,9 @@ All the current information on reverse engineering the FIOS-G1100 Quantum Gatewa
 
 Most of the original info here is from the [binwalk issue thread](https://github.com/devttys0/binwalk/issues/256)
 
+### Verizon open source code for adherence to the gpl licence
+https://www.verizon.com/support/consumer/internet/open-source-software-portal?CMP=DMC-CVZ_ZZ_ZZ_Z_DO_N_X00366
+
 ### Hardware information
 The cpu is an ARMv7 `Cortina G4`
 
@@ -26,11 +29,14 @@ The debug console is disabled for the UART pins on the router board.
 
 In the uBoot logs, the router seems to be opening a rw console on UART0. There are apparently multiple serial ports named; UART0, UART1, UART2, and UART3
 
+ The ports are a alzz
+
 ### Rolling back your firmware ([creds](https://github.com/Brandonv101))
 I also found a few hidden firmware rollback and update links assuming that the router is using the 192.168.1.1 IP: http://192.168.1.1/#/advanced/fwupgrade & http://192.168.1.1/#/advanced/fwrestore
 
 ### Firmware images/dumps
 Currently nobody has a NAND dump of the older firmware that could hold the decryption/encryption keys/methods. Please make a pull request with the dump if you do!
+Firmware from verizon
 
 Some dumps?
 - https://github.com/paulhkhsu/bhr4
