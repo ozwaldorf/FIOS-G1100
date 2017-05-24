@@ -30,7 +30,7 @@ The debug console is disabled for the UART pins on the router board.
 
 In the uBoot logs, the router seems to be opening a rw console on UART0. There are apparently multiple serial ports named; UART0, UART1, UART2, and UART3
 
- The ports are a alzz
+ The 4 CPU UART ports are ZigBee
 
 ### Rolling back your firmware ([creds](https://github.com/Brandonv101))
 I also found a few hidden firmware rollback and update links assuming that the router is using the 192.168.1.1 IP: http://192.168.1.1/#/advanced/fwupgrade & http://192.168.1.1/#/advanced/fwrestore
