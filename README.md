@@ -10,7 +10,7 @@ link found when searching the model number[WPCS7542E A1](http://www.cortina-acce
 
 Documentation: [450337 CS7542/CS7522 Product Brief](http://www.cortina-access.com/dhp/download/203/996/61)
 
-### Current method of getting a root console ([@jameshilliard](https://github.com/jameshilliard))
+### Current method of getting a root console ([creds](https://github.com/jameshilliard))
 You have to enable ssh using tr-069 on the WAN side(there's a built in remote activate-able root ssh backdoor), I set up a local genieacs server to do that. Redirecting the router to a local acs server is a bit tricky though, I originally tried to mitm it but that's not possible since the router verifies the acs server ssl certificate.
 
 You can however change the config file to disable ssl and point it at your own acs server, the config file is aes encrypted but I have some python scripts that can decrypt and re-encrypt the config file so that it can be edited(I had to get some help with reversing the encryption scheme from the assembly for that).
@@ -24,7 +24,7 @@ The debug console is disabled for the UART pins on the router board.
 
 In the uBoot logs, the router seems to be opening a rw console on UART0. There are apparently multiple serial ports named; UART0, UART1, UART2, and UART3
 
-### Rolling back your firmware ([@Brandonv101](https://github.com/Brandonv101))
+### Rolling back your firmware ([creds](https://github.com/Brandonv101))
 I also found a few hidden firmware rollback and update links assuming that the router is using the 192.168.1.1 IP: http://192.168.1.1/#/advanced/fwupgrade & http://192.168.1.1/#/advanced/fwrestore
 
 ### Firmware images/dumps
@@ -36,7 +36,7 @@ Some dumps?
 - https://github.com/jameshilliard/bhr4_release_1.3.0.47.64
 - https://github.com/jameshilliard/bhr4_release_01_04_00_10
 
-([@jameshilliard](https://github.com/jameshilliard)) The firmware images are both signed and encrypted with PGP, the [signing](https://pgp.mit.edu/pks/lookup?op=vindex&search=0xC32877552D7B4FA1) key is also different from the encryption key.
+The firmware images are both signed and encrypted with PGP, the [signing](https://pgp.mit.edu/pks/lookup?op=vindex&search=0xC32877552D7B4FA1) key is also different from the encryption key.
 
 I managed to find, extract and decrypt the pgp decryption key on the router for one of the firmware images(bhr4_release_01.03.02.02-FTR_firmwareupgrade.bin.signed). You can grab the key from https://github.com/The5heepDev/FIOS-G1100/blob/master/decryptionkey-release_01.03.02.02.pgp
 
