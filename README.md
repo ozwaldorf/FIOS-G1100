@@ -26,6 +26,8 @@ I also found a few hidden firmware rollback and update links assuming that the r
 ### Firmware images/dumps
 Currently nobody has a NAND dump of the older firmware that could hold the decryption/encryption keys/methods. Please make a pull request with the dump if you do!
 
+Decrypted firmware mirror: https://github.com/jameshilliard/bhr4_release_01_04_00_10
+
 ([@jameshilliard](https://github.com/jameshilliard)) The firmware images are both signed and encrypted with PGP, the [signing](https://pgp.mit.edu/pks/lookup?op=vindex&search=0xC32877552D7B4FA1) key is also different from the encryption key.
 
 I managed to find, extract and decrypt the pgp decryption key on the router for one of the firmware images(bhr4_release_01.03.02.02-FTR_firmwareupgrade.bin.signed). You can grab the key from https://github.com/The5heepDev/FIOS-G1100/blob/master/decryptionkey-release_01.03.02.02.pgp
