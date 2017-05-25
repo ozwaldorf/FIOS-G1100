@@ -1,6 +1,8 @@
 # FIOS-G1100
 All the current information on reverse engineering the FIOS-G1100 Quantum Gateway router
 
+The final goal of this project is to be able to port and install openwrt/lede to the FIOS-G1100, a router that stock firmware is awful for
+
 Most of the original info here is from the [binwalk issue thread](https://github.com/devttys0/binwalk/issues/256)
 
 ### Verizon open source code for adherence to the gpl licence
@@ -25,8 +27,17 @@ These are the config file encryption/decryption scripts I'm using:
 - [gwdecrypt.py](https://gist.github.com/jameshilliard/7112235b62dd929d69d7980c979ae7c0)
 - [gwencrypt.py](https://gist.github.com/jameshilliard/99191b2a2877220041dc8789fa07339a)
 
-To enable the tr-069 backdoor you need to send this setParameterValues request using the acs server ["InternetGatewayDevice.X_D4A928_SSH_State", "SSH_REMOTE",'xsd:string"]. It will then generate a temporary root ssh password available by querying getParameterValues for InternetGatewayDevice.X_D4A928_SSH_Session_Password the routers ssh server should listen on the wan side port 22222. Disconnecting from ssh closes the session and you have to do that
-process again to get back in.
+To enable the tr-069 backdoor, you need to send this setParameterValues request using the acs server
+
+`["InternetGatewayDevice.X_D4A928_SSH_State", "SSH_REMOTE",'xsd:string"]`
+
+It will then generate a temporary root ssh password available by querying getParameterValues for 
+
+`InternetGatewayDevice.X_D4A928_SSH_Session_Password` 
+
+The router's ssh server should listen on the wan side port 22222.
+
+Note that disconnecting the ssh session will require you to repeat the process.
 
 ### Information on serial console
 The debug console is disabled for the UART pins on the router board.
